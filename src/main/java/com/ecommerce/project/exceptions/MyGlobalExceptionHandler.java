@@ -1,7 +1,6 @@
-package com.ecommerce.project.service.exceptions;
+package com.ecommerce.project.exceptions;
 
 import com.ecommerce.project.payload.APIResponse;
-import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;

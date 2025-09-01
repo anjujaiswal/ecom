@@ -1,4 +1,4 @@
-package com.ecommerce.project.service.exceptions;
+package com.ecommerce.project.exceptions;
 
 public class APIException extends RuntimeException {
 
