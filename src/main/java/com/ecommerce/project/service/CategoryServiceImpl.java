@@ -59,7 +59,7 @@ public class CategoryServiceImpl implements CategoryService{
         if(categoryFromDB != null)
             throw new APIException("Category with the name " + category.getCategoryName()+ " already exists.");
 
-         Category savedCategory = categoryRepository.save(category);
+        Category savedCategory = categoryRepository.save(category);
         return modelMapper.map(savedCategory, CategoryDTO.class);
     }
 
@@ -74,7 +74,7 @@ public class CategoryServiceImpl implements CategoryService{
     @Override
     public CategoryDTO updateCategory(CategoryDTO categoryDTO, Long categoryId) {
         Category category = modelMapper.map(categoryDTO, Category.class);
-         Category savedCategory = categoryRepository.findById(categoryId)
+        Category savedCategory = categoryRepository.findById(categoryId)
                  .orElseThrow(()-> new ResourceNotFoundException("Category", "CategoryId", categoryId));
         category.setCategoryId(categoryId);
         savedCategory = categoryRepository.save(category);
